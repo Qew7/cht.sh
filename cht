@@ -1,0 +1,13 @@
+#!/bin/sh
+
+function join_by { local d=$1; shift; echo -n "$1"; shift; r= printf "%s" "${@/#/$d}"; ${r::-1}; }
+
+while getopts "l:" flag
+do
+  domain=$OPTARG
+  shift $((OPTIND-1))
+done
+
+[ -z $domain ] && domain="ruby"
+
+curl "cht.sh/$domain/$(join_by '+' $@)"
