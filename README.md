@@ -1,4 +1,4 @@
-Небольшой клиент для cheat.sh на Си Шелле
+Небольшой клиент для [cheat.sh](https://github.com/chubin/cheat.sh) на Си Шелле
 
 # Установка
 
